@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'RushDriver';
+  src: url('/fonts/RushDriver-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@theme {
+  --color-background: #121212;
+  --color-foreground: #ededed;
+  --font-sans: var(--font-inter);
+  --font-speed: 'RushDriver', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    @apply font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-linear-to-b from-white to-white/50;
+  }
+}
+
+/* Limit Next.js DevTools */
+nextjs-portal {
+  display: none !important;
+}
