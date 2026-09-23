@@ -180,7 +180,7 @@ export default function Certifications() {
             />
 
             {/* Section Header */}
-            <div className="max-w-7xl mx-auto px-6 mb-12 md:mb-16">
+            <div className="max-w-7xl mx-auto px-6 mb-8 md:mb-12">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -195,12 +195,9 @@ export default function Certifications() {
                         </span>
                     </div>
 
-                    <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-4">
+                    <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white">
                         Technical Validation
                     </h2>
-                    <p className="text-sm md:text-base text-neutral-400 max-w-lg mx-auto">
-                        Explore industry-verified certifications in our interactive spotlight carousel. Click any card to center it and view credentials.
-                    </p>
                 </motion.div>
             </div>
 
