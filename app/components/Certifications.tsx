@@ -26,6 +26,18 @@ interface Certification {
 
 const certificationsList: Certification[] = [
     {
+        id: "reactjs",
+        title: "React.js Core",
+        category: "Frontend Architecture",
+        issuer: "Scaler Topics",
+        description: "Component hierarchy, Virtual DOM, custom hooks, state management, and modern SPA architecture.",
+        date: "2026",
+        file: "/certifications/reactjs.png",
+        badge: "Scaler Certified",
+        image: "/spotlight/card_react.jpg",
+        glow: "rgba(6, 182, 212, 0.55)"
+    },
+    {
         id: "aws-s3",
         title: "AWS S3 Basics",
         category: "Cloud Architecture",
@@ -450,7 +462,7 @@ export default function Certifications() {
                                         rel="noopener noreferrer"
                                         className="hidden sm:flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-xs text-white transition-all shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]"
                                     >
-                                        <span>Open PDF</span>
+                                        <span>{selectedCert.file.endsWith('.pdf') ? 'Open PDF' : 'Full Image'}</span>
                                         <ExternalLink className="w-3.5 h-3.5" />
                                     </a>
                                     <button
@@ -463,13 +475,23 @@ export default function Certifications() {
                                 </div>
                             </div>
 
-                            {/* Modal Iframe PDF Body */}
-                            <div className="relative flex-1 w-full bg-[#1a1a1e]">
-                                <iframe
-                                    src={`${selectedCert.file}#toolbar=0`}
-                                    className="w-full h-full border-none"
-                                    title={selectedCert.title}
-                                />
+                            {/* Modal Certificate Body (Supports PDF & Images) */}
+                            <div className="relative flex-1 w-full bg-[#141418] flex items-center justify-center p-3 md:p-6 overflow-auto">
+                                {selectedCert.file.endsWith('.pdf') ? (
+                                    <iframe
+                                        src={`${selectedCert.file}#toolbar=0`}
+                                        className="w-full h-full border-none rounded-xl"
+                                        title={selectedCert.title}
+                                    />
+                                ) : (
+                                    <div className="relative max-w-full max-h-full flex items-center justify-center">
+                                        <img
+                                            src={selectedCert.file}
+                                            alt={selectedCert.title}
+                                            className="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl border border-white/15"
+                                        />
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     </motion.div>
