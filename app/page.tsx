@@ -41,7 +41,7 @@ export default function Home() {
 
                     <div className="flex justify-center gap-8 mb-12 md:mb-20">
                         <a
-                            href="https://linkedin.com/in/indiresan-kaliyappan-9924b0386"
+                            href="https://www.linkedin.com/in/indiresan"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-sm tracking-widest uppercase text-white/50 hover:text-white transition-colors"
