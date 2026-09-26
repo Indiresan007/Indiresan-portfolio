@@ -8,7 +8,7 @@ const projects = [
         category: "Luxury E-Commerce",
         description: "India's premier luxury sneaker platform featuring authentic verified footwear, dynamic catalog filtering, secure checkout, and real-time order management.",
         tags: ["React", "JavaScript", "Tailwind CSS", "Firebase"],
-        image: "/projects/sneakify.png",
+        image: "/projects/sneakify.jpg",
         link: "https://sneakify.web.app/"
     },
     {
