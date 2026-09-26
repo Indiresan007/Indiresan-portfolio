@@ -67,23 +67,9 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
                     <h2 className="text-3xl md:text-7xl font-semibold text-white leading-[1.1] mb-6">
                         The <span className="italic font-light text-white/50">Toolkit.</span>
                     </h2>
-                    <p className="text-base md:text-lg text-white/70 max-w-lg ml-auto leading-relaxed mb-6">
+                    <p className="text-base md:text-lg text-white/70 max-w-lg ml-auto leading-relaxed">
                         Proficient in React.js, JavaScript, Python, and Java. Specializing in Modern Web Architecture, Next.js, Component Systems, SQL Databases, and Creative Design Tools.
                     </p>
-                    <div className="flex flex-wrap justify-end gap-2 max-w-md pointer-events-auto">
-                        {['React.js', 'Next.js', 'JavaScript (ES6+)', 'Tailwind CSS', 'Python', 'Java', 'SQL'].map((skill) => (
-                            <span 
-                                key={skill}
-                                className={`px-3.5 py-1.5 rounded-full border text-xs md:text-sm font-medium backdrop-blur-md transition-all ${
-                                    skill === 'React.js' 
-                                        ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.35)]' 
-                                        : 'bg-white/[0.08] text-white/80 border-white/15'
-                                }`}
-                            >
-                                {skill}
-                            </span>
-                        ))}
-                    </div>
                 </div>
             </motion.div>
         </div>
