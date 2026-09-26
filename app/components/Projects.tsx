@@ -4,25 +4,28 @@ import { motion } from 'framer-motion';
 
 const projects = [
     {
-        title: "Puma Future Store",
-        category: "The E-Commerce Experience",
-        description: "A dynamic, futuristic e-commerce platform featuring secure Firebase authentication, real-time database integration for order tracking, and a fully responsive UI/UX design.",
-        tags: ["HTML5", "CSS3", "JavaScript (ES6+)", "Firebase"],
-        image: "/projects/puma.png"
+        title: "Sneakify",
+        category: "Luxury E-Commerce",
+        description: "India's premier luxury sneaker platform featuring authentic verified footwear, dynamic catalog filtering, secure checkout, and real-time order management.",
+        tags: ["React", "JavaScript", "Tailwind CSS", "Firebase"],
+        image: "/projects/sneakify.png",
+        link: "https://sneakify.web.app/"
     },
     {
         title: "Speech Emotion Recognition",
         category: "AI Integration",
         description: "An RNN-based deep learning system achieving 96.96% accuracy. Integrated into a web interface for real-time prediction, outperforming traditional CNN models.",
         tags: ["Python", "Deep Learning", "Web Interface", "Django"],
-        image: "/projects/ai.png"
+        image: "/projects/ai.png",
+        link: "https://github.com/indiresan007"
     },
     {
         title: "Real-Time Weather Monitor",
         category: "IoT Innovation",
         description: "An IoT solution utilizing Raspberry Pi and Arduino to capture and transmit environmental data wirelessly for remote analysis.",
         tags: ["IoT", "Raspberry Pi", "Arduino", "Wireless Transmission"],
-        image: "/projects/iot.png"
+        image: "/projects/iot.png",
+        link: "https://github.com/indiresan007"
     },
 ];
 
@@ -45,13 +48,16 @@ export default function Projects() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, i) => (
-                        <motion.div
+                        <motion.a
                             key={i}
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: i * 0.15 }}
                             viewport={{ once: true }}
-                            className="group relative h-[550px] w-full cursor-pointer rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-white/30 transition-colors"
+                            className="group relative h-[550px] w-full cursor-pointer rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-white/30 transition-colors block text-left"
                         >
                             {/* Background Image */}
                             <img
@@ -90,7 +96,7 @@ export default function Projects() {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
             </div>
