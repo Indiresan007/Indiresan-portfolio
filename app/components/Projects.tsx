@@ -17,7 +17,7 @@ const projects = [
         description: "An RNN-based deep learning system achieving 96.96% accuracy. Integrated into a web interface for real-time prediction, outperforming traditional CNN models.",
         tags: ["Python", "Deep Learning", "Web Interface", "Django"],
         image: "/projects/ai.png",
-        link: "https://github.com/indiresan007"
+        link: "https://github.com/Indiresan007/An-Enhanced-Speech-Emotion-Recognition-System-Using-RNN-compared-with-CNN"
     },
     {
         title: "Real-Time Weather Monitor",
@@ -25,7 +25,7 @@ const projects = [
         description: "An IoT solution utilizing Raspberry Pi and Arduino to capture and transmit environmental data wirelessly for remote analysis.",
         tags: ["IoT", "Raspberry Pi", "Arduino", "Wireless Transmission"],
         image: "/projects/iot.png",
-        link: "https://github.com/indiresan007"
+        link: "https://github.com/Indiresan007/Weather-Monitoring-System-using-IOT"
     },
 ];
 
