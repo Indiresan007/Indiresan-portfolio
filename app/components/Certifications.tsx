@@ -26,6 +26,18 @@ interface Certification {
 
 const certificationsList: Certification[] = [
     {
+        id: "pandas-numpy",
+        title: "Pandas & NumPy",
+        category: "Data Science & Computing",
+        issuer: "CourseLabz",
+        description: "Vectorized computations, multi-dimensional array math, DataFrame transformations, filtering, and data aggregation.",
+        date: "2026",
+        file: "/certifications/pandas_numpy.pdf",
+        badge: "CourseLabz Certified",
+        image: "/spotlight/card_pandas.jpg",
+        glow: "rgba(14, 165, 233, 0.55)"
+    },
+    {
         id: "reactjs",
         title: "React.js Core",
         category: "Frontend Architecture",
@@ -136,7 +148,7 @@ const certificationsList: Certification[] = [
 ];
 
 export default function Certifications() {
-    const [activeIndex, setActiveIndex] = useState(2);
+    const [activeIndex, setActiveIndex] = useState(0);
     const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
     const [viewportWidth, setViewportWidth] = useState(1200);
 
@@ -460,7 +472,7 @@ export default function Certifications() {
                                         href={selectedCert.file}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="hidden sm:flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-xs text-white transition-all shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]"
+                                        className="flex items-center gap-1.5 px-3 py-1.5 sm:px-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-xs text-white transition-all shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]"
                                     >
                                         <span>{selectedCert.file.endsWith('.pdf') ? 'Open PDF' : 'Full Image'}</span>
                                         <ExternalLink className="w-3.5 h-3.5" />
